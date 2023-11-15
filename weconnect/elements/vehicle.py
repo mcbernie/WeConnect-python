@@ -606,7 +606,7 @@ class Vehicle(AddressableObject):  # pylint: disable=too-many-instance-attribute
 
             self.__carImages['status'] = img
 
-            imgWithBadges = img.copy()
+            imgWithBadges = img.copy().convert('RGBA')
             badgeoffset = 0
             for badge in badges:
                 badgeImage = self.__badges[badge].convert("RGBA")
